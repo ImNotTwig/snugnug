@@ -63,19 +63,24 @@
       .section {
         padding: 40px 20px;
         margin: 0 auto 40px;
-        max-width: 800px;
+        max-width: 900px;
+      }
+      .section p {
+          max-height: 5px;
       }
 
       footer {
         background-color: var(--primary-color);
         color: white;
-        padding: 20px;
         text-align: center;
-        margin-top: 40px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
       }
 
       footer p {
-        margin: 0;
+          font-size: 1em;
+          margin: 0;
       }
 
       h2 {
@@ -93,23 +98,71 @@
         font-size: 1.1em;
         margin-bottom: 10px;
       }
+
+      .top-nav-bar {
+          background: var(--primary-color);
+          display: flex;
+          top: 0;
+          position: fixed;
+          width: 100%;
+          align-items: center;
+      }
+      .top-nav-bar a {
+          text-decoration: none;
+          border: 2px solid darkgray;
+          padding: 5px;
+          color: darkgray;
+      }
+      .top-nav-bar a.active {
+          border: 2px solid var(--background-contrast);
+          color: white;
+      }
+      .top-nav-bar a:hover {
+          color: var(--secondary-color);
+      }
+
+      .top-nav-logo {
+          width: 75px;
+          padding-right: 25px;
+          padding-left: 5px;
+      }
+      .top-nav-logo a {
+          all: unset;
+          font-size: 30px;
+      }
     </style>
   </head>
   <body>
+    <div class="top-nav-bar">
+      <div class="top-nav-logo">
+        <a>
+          SNUG
+        </a>
+      </div>
+      <a class="active" href="#home">Home</a>
+      <a href="#social">Social</a>
+      <a href="#otherthing">Other</a>
+    </div>
+    
     <div class="section">
-      <h2>Welcome to SNUG!</h2>
+      <h2>Welcome to Simply, a Nix User Group!</h2>
       <p>something something welcome message</p>
     </div>
 
     <section class="section">
       <h2>About SNUG</h2>
-      <p>SNUG is a space where nothing ever happens</p>
+      <p>Simply, This Nix user group is about working on projects that are potentially helpful to people in the Nix/Nixos ecosystem.</p><br>
+      <p>We have a few projects, which you can find at &lt;github org here&gt;. Every project we maintain and host is a community effort, and we would love to see more members contributing. As they say, the more the merrier!</p>
     </section>
 
     <section class="section">
       <h2>Why Join Us?</h2>
       <ul>
         <li>Get berated by raf</li>
+        <li>Get paid in half-eaten hotdogs</li>
+        <li>Bikeshedding to the nines</li>
+        <li>Sometimes we get projects done though</li>
+        <li>Like uh.., well, oh forget it</li>
       </ul>
     </section>
 
